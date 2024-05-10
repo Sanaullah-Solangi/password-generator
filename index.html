@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <!--!=== header ===-->
+        <div class="header">
+          <!--? heading -->
+          <h1 class="heading">
+            Need a password? Try the 1Password Strong Password Generator.
+          </h1>
+          <!--? heading para -->
+          <p class="heading-para">
+            Generate secure, random passwords to stay safe online.
+          </p>
+        </div>
+        <!--!=== body ===-->
+        <div class="password-body">
+          <!--? display  -->
+
+          <p>Generate password:</p>
+          <p id="display"></p>
+
+          <!--? password type -->
+          <div class="password-type-container">
+            <!--todo type heading -->
+            <p class="type-heading">password type:</p>
+            <!--? type content -->
+            <div class="type-content">
+              <!--todo type selector -->
+              <p class="type-selector">
+                random password
+                <i class="fa-solid fa-angle-down"></i>
+              </p>
+              <!--todo repeat button -->
+              <i onclick="ranPassword()" class="fa-solid fa-repeat"></i>
+              <!--todo copy button -->
+              <button class="copy-btn">copy secure password</button>
+            </div>
+          </div>
+          <!--? password copy status -->
+          <div class="password-copy-status">
+            <button>password not copied</button>
+          </div>
+          <!--? password features  -->
+          <div class="password-features">
+            <!--* range  -->
+            <label for="range"
+              >length
+              <input
+                onchange="ranPassword(this.value)"
+                min="8"
+                max="20"
+                type="range"
+                name="range"
+                id="range"
+              />
+              <span class="rangeNum">0</span>
+            </label>
+            <div>
+              <!--* numbers  -->
+              <label for="numbers">
+                <input type="checkbox" name="numbers" id="numbers" />numbers
+              </label>
+              <!--* symbols  -->
+              <label for="symbols">
+                <input type="checkbox" name="symbols" id="symbols" /> symbols
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

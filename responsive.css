@@ -1,0 +1,122 @@
+@media (width <= 965px) {
+  .container {
+    width: 600px;
+  }
+  .header > .heading {
+    font-size: 3rem;
+  }
+  .password-body {
+    font-size: 2rem;
+  }
+  .password-body > label > input,
+  .password-copy-status > button {
+    font-size: 2.5rem;
+    padding: 5px 10px;
+  }
+  .type-content {
+    gap: 1rem;
+  }
+  .type-content :is(.type-selector, button) {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+  }
+  .type-content > i {
+    font-size: 2rem;
+  }
+  .password-copy-status > button {
+    font-size: 2rem;
+  }
+  .password-features {
+    padding: 20px 10px;
+    gap: 30px;
+  }
+  .password-features > label {
+    gap: 10px;
+  }
+  .password-features input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (width <= 675px) {
+  .container {
+    width: 90%;
+  }
+  .header > .heading {
+    font-size: 2.8rem;
+  }
+  .password-body {
+    font-size: 1.8rem;
+  }
+  .password-body > label > input,
+  .password-copy-status > button {
+    font-size: 2.5rem;
+    padding: 5px 10px;
+  }
+  .type-content {
+    gap: 1rem;
+  }
+
+  .type-content > i {
+    font-size: 1.5rem;
+  }
+  .password-copy-status > button {
+    font-size: 1.5rem;
+  }
+  .password-features {
+    padding: 15px 10px;
+    gap: 20px;
+  }
+  .password-features > label {
+    gap: 5px;
+  }
+  .password-features input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (width <= 530px) {
+  .container {
+    width: 90%;
+  }
+  .header > .heading {
+    font-size: 2.8rem;
+  }
+  .password-body {
+    font-size: 1.8rem;
+  }
+  .password-body > label > input,
+  .password-copy-status > button {
+    font-size: 2.5rem;
+    padding: 5px 10px;
+  }
+  .type-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .type-content > :is(.type-selector, .copy-btn) {
+    width: 100%;
+  }
+  .type-content > i {
+    font-size: 1.5rem;
+  }
+  .password-copy-status > button {
+    font-size: 1.5rem;
+  }
+  .password-features {
+    padding: 15px 10px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .password-features label {
+    gap: 5px;
+  }
+  .password-features input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+}
