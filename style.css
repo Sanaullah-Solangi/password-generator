@@ -13,13 +13,12 @@ html {
   font-size: 62.5%;
 }
 
-/*======= reuseable code =======*/
+/*!======= reuseable code =======*/
 
 .main-container,
 .container,
 .password-body,
 .password-body > p,
-.password-body p:nth-child(2) > #display,
 .password-type-container > .type-content,
 .password-copy-status,
 .type-selector,
@@ -50,8 +49,7 @@ html {
   align-items: center;
 }
 
-.header,
-.password-body > p:nth-child(2) {
+.header {
   text-align: center;
 }
 
@@ -59,6 +57,11 @@ input,
 button,
 .password-body > p:nth-child(2) > #display {
   color: black;
+}
+
+.label,
+.password-body > p:nth-child(2) {
+  text-transform: none;
 }
 
 /*!======= reuseable code ends=======*/
@@ -74,50 +77,44 @@ button,
 }
 
 .container {
-  width: 800px;
+  width: 700px;
   height: fit-content;
   gap: 10px;
-  margin: 80px 0 50px;
+  margin: 20px 0 30px;
 }
-/**======= header styling =======*/
+/*!======= header styling =======*/
 .header > .heading {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .header > .heading-para {
   font-size: 2rem;
 }
 
-/**======= display parent styling =======*/
+/*!======= display parent styling =======*/
 .password-body,
-.password-features {
+.password-features,
+.password-body > p,
+.password-type-container {
   width: 100%;
 }
 
 .password-body {
   gap: 10px;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
-/**======= display styling =======*/
-.password-body > p,
-.password-type-container {
-  width: 100%;
-}
+/*!======= display styling =======*/
 .password-body > p:nth-child(2) {
   background-color: white;
   height: fit-content;
-  text-transform: none;
   padding-right: 20px;
+  border: 1px solid white;
 }
-.password-body p:nth-child(2) > #display {
-  border: none;
-  outline: none;
-}
-.password-body p:nth-child(2) > #display,
-.password-copy-status > button {
-  font-size: 3rem;
-  padding: 10px 20px;
+
+.password-body > p:nth-child(2),
+.password-body > p:nth-child(2) > #display,
+.password-features {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -125,22 +122,45 @@ button,
   -o-border-radius: 10px;
 }
 
+.password-body p:nth-child(2) > #display {
+  border: none;
+  outline: none;
+}
+.password-body p:nth-child(2) > #display,
+.password-copy-status > button {
+  font-size: 2.5rem;
+  padding: 5px 10px;
+}
+
+.password-body > p {
+  justify-content: space-between;
+}
+.password-body > p > i {
+  font-size: 3rem;
+  color: black;
+}
+.password-body p:nth-child(2) > .hide {
+  display: none;
+}
+
+/*!======= type container styling =======*/
+
 .password-type-container > p {
   margin-bottom: 10px;
 }
 
 .type-content {
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .type-content :is(.type-selector, button) {
   flex-grow: 1;
   font-size: 2.3rem;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 30px;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
   color: white;
 }
 
@@ -164,20 +184,20 @@ button,
   font-size: 2rem;
 }
 
+/*!======= copied status styling =======*/
+
 .password-copy-status > button {
   font-size: 2.2rem;
   font-weight: 500;
   background-color: rgb(255, 212, 128);
 }
+
+/*!======= password features styling =======*/
+
 .password-features {
-  padding: 30px 20px;
-  gap: 40px;
+  padding: 20px 10px;
+  gap: 50px;
   background-color: rgb(10, 37, 60);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 .password-features :is(div, label) {
@@ -192,17 +212,4 @@ button,
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-}
-.label {
-  text-transform: none;
-}
-.password-body > p {
-  justify-content: space-between;
-}
-.password-body > p > i {
-  font-size: 3rem;
-  color: black;
-}
-.password-body p:nth-child(2) > .hide {
-  display: none;
 }

@@ -14,12 +14,6 @@ var showPassword = document.querySelector(".show");
 var hidePassword = document.querySelector(".hide");
 display.value += "password";
 
-function show() {
-  display.type = "password";
-  display.style.fontWeight = "bolder";
-  showPassword.style.display = "none";
-  hidePassword.style.display = "block";
-}
 //! show & hide password
 showPassword.addEventListener("click", () => {
   display.type = "password";
@@ -33,11 +27,16 @@ hidePassword.addEventListener("click", () => {
   showPassword.style.display = "block";
   hidePassword.style.display = "none";
 });
+
+//! function to get range
+function getRange() {
+  rangeNum.innerHTML = range.value;
+}
+getRange();
 //! funtion to generate password
 function ranPassword() {
   var result = "";
   var finalResult = "";
-  rangeNum.innerHTML = range.value;
   result = capAlpha;
   //? conditional statements
   if (

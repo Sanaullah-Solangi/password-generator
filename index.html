@@ -66,12 +66,13 @@
             <label for="range"
               >length
               <input
-                onchange="ranPassword(this.value)"
+                oninput="getRange()"
                 min="8"
                 max="20"
                 type="range"
                 name="range"
                 id="range"
+                value="10"
               />
               <span class="rangeNum">0</span>
             </label>
