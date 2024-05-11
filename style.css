@@ -81,7 +81,7 @@ button,
 }
 /**======= header styling =======*/
 .header > .heading {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .header > .heading-para {
@@ -95,8 +95,8 @@ button,
 }
 
 .password-body {
-  gap: 20px;
-  font-size: 3rem;
+  gap: 10px;
+  font-size: 2.2rem;
 }
 
 /**======= display styling =======*/
@@ -134,13 +134,13 @@ button,
 }
 .type-content :is(.type-selector, button) {
   flex-grow: 1;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   padding: 10px 20px;
   border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
   color: white;
 }
 
@@ -165,7 +165,7 @@ button,
 }
 
 .password-copy-status > button {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 500;
   background-color: rgb(255, 212, 128);
 }
