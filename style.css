@@ -18,6 +18,7 @@ html {
 .main-container,
 .container,
 .password-body,
+.password-body > p,
 .password-type-container > .type-content,
 .password-copy-status,
 .type-selector,
@@ -36,6 +37,7 @@ html {
 .main-container,
 .container,
 .password-body,
+.password-body > p,
 .password-type-container > .type-content,
 .password-copy-status,
 .type-selector,
@@ -53,11 +55,11 @@ html {
 
 input,
 button,
-.password-body > p:nth-child(2) {
+.password-body > p:nth-child(2) > #display {
   color: black;
 }
 
-/*======= reuseable code ends=======*/
+/*!======= reuseable code ends=======*/
 
 .main-container {
   background-color: var(--mainColor);
@@ -75,7 +77,7 @@ button,
   gap: 10px;
   margin: 80px 0 50px;
 }
-
+/**======= header styling =======*/
 .header > .heading {
   font-size: 5rem;
 }
@@ -83,6 +85,8 @@ button,
 .header > .heading-para {
   font-size: 2rem;
 }
+
+/**======= display parent styling =======*/
 .password-body,
 .password-features {
   width: 100%;
@@ -92,6 +96,8 @@ button,
   gap: 20px;
   font-size: 3rem;
 }
+
+/**======= display styling =======*/
 .password-body > p,
 .password-type-container {
   width: 100%;
@@ -100,8 +106,13 @@ button,
   background-color: white;
   height: fit-content;
   text-transform: none;
+  padding-right: 20px;
 }
-.password-body p:nth-child(2),
+.password-body p:nth-child(2) > #display {
+  border: none;
+  outline: none;
+}
+.password-body p:nth-child(2) > #display,
 .password-copy-status > button {
   font-size: 3rem;
   padding: 10px 20px;
@@ -124,10 +135,10 @@ button,
   font-size: 2.5rem;
   padding: 10px 20px;
   border-radius: 30px;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
   color: white;
 }
 
@@ -182,4 +193,14 @@ button,
 }
 .label {
   text-transform: none;
+}
+.password-body > p {
+  justify-content: space-between;
+}
+.password-body > p > i {
+  font-size: 3rem;
+  color: black;
+}
+.password-body p:nth-child(2) > .hide {
+  display: none;
 }

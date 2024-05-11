@@ -1,7 +1,4 @@
-var log = console.log;
 //! random values containers
-// var ranValue =
-//   "!@#$%^&*()_+-={}[];:',.<>/?|0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var specChar = "!@#$%^&*()_+-={}[];:',.<>/?|";
 var numbers = "0123456789";
 var smallAlpha = "abcdefghijklmnopqrstuvwxyz";
@@ -13,9 +10,23 @@ var rangeNum = document.querySelector(".rangeNum");
 var numbersCheckBox = document.querySelector("#numbers");
 var symbolsCheckBox = document.querySelector("#symbols");
 var smallLettersCheckBox = document.querySelector("#smallLetters");
-display.innerHTML = "password";
-//! funtion to generate password
+var showPassword = document.querySelector(".show");
+var hidePassword = document.querySelector(".hide");
+display.value += "password";
 
+//! show & hide password
+showPassword.addEventListener("click", () => {
+  display.type = "password";
+  display.style.fontSize = "3rem";
+  showPassword.style.display = "none";
+  hidePassword.style.display = "block";
+});
+hidePassword.addEventListener("click", () => {
+  display.type = "text";
+  showPassword.style.display = "block";
+  hidePassword.style.display = "none";
+});
+//! funtion to generate password
 function ranPassword() {
   var result = "";
   var finalResult = "";
@@ -76,6 +87,5 @@ function ranPassword() {
   for (var i = 0; i < range.value; i++) {
     finalResult += result[Math.ceil(Math.random() * result.length - 1)];
   }
-  display.innerHTML = finalResult;
-  // console.log(finalResult);
+  display.value = finalResult;
 }
