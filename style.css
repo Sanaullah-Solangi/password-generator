@@ -23,7 +23,8 @@ html {
 .type-selector,
 .password-features,
 .password-features label,
-.password-features > div {
+.password-features > div,
+.label {
   display: flex;
 }
 
@@ -39,7 +40,8 @@ html {
 .password-copy-status,
 .type-selector,
 .password-features,
-.password-features > label {
+.password-features > label,
+.label {
   justify-content: center;
   align-items: center;
 }
@@ -139,6 +141,12 @@ button,
   border: none;
   outline: none;
 }
+.type-content > button,
+.type-content > i,
+.password-features :is(input, label) {
+  cursor: pointer;
+}
+
 .type-content > i {
   font-size: 2rem;
 }
@@ -171,4 +179,7 @@ button,
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+.label {
+  text-transform: none;
 }
