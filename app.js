@@ -14,6 +14,12 @@ var showPassword = document.querySelector(".show");
 var hidePassword = document.querySelector(".hide");
 display.value += "password";
 
+function show() {
+  display.type = "password";
+  display.style.fontWeight = "bolder";
+  showPassword.style.display = "none";
+  hidePassword.style.display = "block";
+}
 //! show & hide password
 showPassword.addEventListener("click", () => {
   display.type = "password";
