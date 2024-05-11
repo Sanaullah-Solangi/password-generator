@@ -17,12 +17,13 @@ display.value += "password";
 //! show & hide password
 showPassword.addEventListener("click", () => {
   display.type = "password";
-  display.style.fontSize = "3rem";
+  display.style.fontWeight = "bolder";
   showPassword.style.display = "none";
   hidePassword.style.display = "block";
 });
 hidePassword.addEventListener("click", () => {
   display.type = "text";
+  display.style.fontWeight = "normal";
   showPassword.style.display = "block";
   hidePassword.style.display = "none";
 });
