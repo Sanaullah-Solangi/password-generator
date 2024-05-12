@@ -19,6 +19,7 @@ html {
 .container,
 .password-body,
 .password-body > p,
+.password-body > p > .toggleBtns,
 .password-type-container > .type-content,
 .password-copy-status,
 .type-selector,
@@ -39,6 +40,7 @@ html {
 .password-body,
 .password-body p:nth-child(2) > #display,
 .password-body > p,
+.password-body > p > .toggleBtns,
 .password-type-container > .type-content,
 .password-copy-status,
 .type-selector,
@@ -125,6 +127,7 @@ button,
 .password-body p:nth-child(2) > #display {
   border: none;
   outline: none;
+  width: 70%;
 }
 .password-body p:nth-child(2) > #display,
 .password-copy-status > button {
@@ -135,11 +138,14 @@ button,
 .password-body > p {
   justify-content: space-between;
 }
-.password-body > p > i {
+
+/*!==== show hide icons =====*/
+.password-body > p > .toggleBtns > i {
   font-size: 3rem;
   color: black;
 }
-.password-body p:nth-child(2) > .hide {
+
+.password-body p:nth-child(2) > .toggleBtns .hide {
   display: none;
 }
 
